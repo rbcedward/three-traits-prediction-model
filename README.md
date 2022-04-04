@@ -15,7 +15,7 @@ After collecting data and noted those three columns, we can flip to next part, w
 ### functions of calculating of photo
 In this part, we define lots of functions, some of it is refer some code from others, but I can't remember where I found these. If user know the source, please tell me, that I could add the reference of those code written by others.
 
-1.1 visualize andmark
+### 1.1 visualize andmark
 
 ```python
 def visualize_landmark(image_array, landmarks):
@@ -31,7 +31,7 @@ def visualize_landmark(image_array, landmarks):
     imshow(origin_img)
 ```                 
 
-1.2 point center of two eyes
+### 1.2 point center of two eyes
 
 
 ```python
@@ -64,7 +64,7 @@ def align_face(image_array, landmarks):
     rotated_img = cv2.warpAffine(image_array, rotate_matrix, (image_array.shape[1], image_array.shape[0]))
     return rotated_img, eye_center, angle
 ``` 
-1.3 rotate picture
+### 1.3 rotate picture
 
 ```python
 def rotate(origin, point, angle, row):
@@ -86,7 +86,7 @@ def rotate(origin, point, angle, row):
     return int(x), int(y)
 ```
 
-1.4 rotate landmarks
+### 1.4 rotate landmarks
 
 ```python
 def rotate_landmarks(landmarks, eye_center, angle, row):
@@ -104,8 +104,7 @@ def rotate_landmarks(landmarks, eye_center, angle, row):
             rotated_landmarks[facial_feature].append(rotated_landmark)
     return rotated_landmarks
 ``` 
-
-1.5 corp picture
+### 1.5 corp picture
 
 ```python
 def corp_face(image_array, landmarks):
@@ -140,7 +139,7 @@ def corp_face(image_array, landmarks):
 ``` 
 
 
-1.6 chop background
+### 1.6 chop background
 
 ```python
 def chop_back(img):
@@ -156,7 +155,7 @@ def chop_back(img):
     return Image.fromarray(cropped_img)
 ``` 
 
-1.7 polygon area,centeroidnp, distance ,x^2 coefficient calucation
+### 1.7 polygon area,centeroidnp, distance ,x^2 coefficient calucation
 
 ```python
 #多變形面積計算
@@ -198,7 +197,7 @@ def gradx2_ca(arr):
     return model.coef_[1]
 ``` 
 
-1.8 HSV calucation
+### 1.8 HSV calucation
 
 ```python
 import colorsys
@@ -235,7 +234,7 @@ def chop_area(img, outline):
     return Image.fromarray(cropped_img)
 ``` 
 
-1.9 entropy color calucation
+### 1.9 entropy color calucation
 
 ```python
 def get_entropy_color(image):
@@ -264,7 +263,7 @@ def hist_entropy(h):
 ```
 
 
-1.10 excel output function
+### 1.10 excel output function
 
 ```python
 def append_df_to_excel(filename, df, sheet_name='Sheet1', startrow=None,
@@ -298,8 +297,8 @@ def my_mode(sample):
     return [k for k, v in c.items() if v == c.most_common(1)[0][1]]
 ``` 
 
-1.11 aggregate whole function
-
+### 1.11 aggregate whole function
+The following is what will we do in the whole function.
 - read photo folder
 - read photo
 - photo manipulate
