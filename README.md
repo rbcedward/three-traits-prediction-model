@@ -10,7 +10,7 @@ A data set of list of CEO is required in the begining, here is the example of ex
 
 ## Python code 
 ### preamble
-After collecting data and noted those three columns, we can flip to next part, which is python code. In this article, we use a lot of modules and packages, The  preamble.ipynb contains code of those modules. If user have not downloaded before, please take some time to finishing downlaoding or updateing those modules and packages first.
+After collecting data and noted those three columns, we can flip to next part, which is python code. In this article, we use a lot of modules and packages, The  preamble.ipynb contains code of those modules. If user have not downloaded before, please take some time to finishing downlaoding or updateing those modules and packages first. use %run ('filepath')\preamble.ipynb to run another jupyter notebook script.
 
 ### functions of calculating of photo
 In this part, we define lots of functions, some of it is refer some code from others, but I can't remember where I found these. If user know the source, please tell me, that I could add the reference of those code written by others.
